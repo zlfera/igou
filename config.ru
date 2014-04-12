@@ -1,4 +1,4 @@
 require "bundler"
 Bundler.require
 require './app'
-run App::Weixin
+run App::Gougou
