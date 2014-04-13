@@ -1,6 +1,7 @@
 module App
   class Gougou < Sinatra::Base
     get '/index' do
+      params[:echostr]
       slim :index
     end
 
