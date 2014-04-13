@@ -1,7 +1,7 @@
 module App
   class Gougou < Sinatra::Base
     get '/index' do
-      slim: index
+      slim :index
     end
 
     post '/index' do
