@@ -1,5 +1,6 @@
 #coding:utf-8
 module App
+  require 'digest/sha1'
   class Gougou < Sinatra::Base
     enable :logging
     Dir.glob('./controllers/*.rb').each {|file| require file}
@@ -10,13 +11,7 @@ module App
       halt(401,'wrong') unless Digest::SHA1.hexdigest(codes) == params[:signature]
     end
     
-      get '/index' do
-    params[:echostr]
-  end
 
-  post '/index' do
-    
-  end
     
   end
 end
