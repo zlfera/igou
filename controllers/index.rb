@@ -1,4 +1,4 @@
-class Weixin < Sinatra::Base
+class Gougou < Sinatra::Base
   get '/index' do
     params[:echostr]
   end
