@@ -1,8 +1,9 @@
 #coding:utf-8
 module App
-  require 'digest/sha1'
+  
   class Gougou < Sinatra::Base
     enable :logging
+    require 'digest/sha1'
     Dir.glob('./controllers/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
     before do
