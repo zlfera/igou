@@ -4,8 +4,9 @@ module App
       params[:echostr]
     end
     
-
-    
+    get '/' do
+      'zenglingfa'
+    end
     
     
   end
