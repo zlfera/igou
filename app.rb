@@ -10,9 +10,9 @@ module App
       timestamp, nonce = params[:timestamp].to_s, params[:nonce].to_s
       codes = [TOKEN, timestamp, nonce].sort.join('')
       if Digest::SHA1.hexdigest(codes) == params[:signature]
-        render 'h'
+        redirect to('/h')
       else
-        render 'g'
+        redirect to('/g')
       end
     end
     
