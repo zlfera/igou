@@ -10,6 +10,10 @@ module App
   get '/g' do
     'hhhh'
   end
+    
+    post '/index' do
+      
+    end
   
   end
 end
