@@ -1,7 +1,7 @@
 module App
   class Gougou < Sinatra::Base
     get '/index' do
-      "#{params[:echostr]}"
+      params[:echostr]
     end
     
   get '/h' do
