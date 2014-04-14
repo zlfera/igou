@@ -5,7 +5,7 @@ module App
       slim :index
     end
 
-    post '/index' do
+    post '/indexx' do
       if params[:xml][:MsgType] == "text"
         render "index", :formats => :xml
       end
