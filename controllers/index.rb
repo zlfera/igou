@@ -1,6 +1,6 @@
 module App
   class Gougou < Sinatra::Base
-    get '/index' do
+    get '/weixin_api' do
       params[:echostr]
     end
     
@@ -11,9 +11,7 @@ module App
     'hhhh'
   end
     
-    post '/index' do
-      
-    end
-  
+    
+    
   end
 end
