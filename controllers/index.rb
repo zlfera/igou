@@ -3,11 +3,13 @@ module App
     get '/index' do
       "#{params[:echostr]}"
     end
-
-    post '/indexx' do
-      if params[:xml][:MsgType] == "text"
-        render "index", :formats => :xml
-      end
-    end
+    
+  get '/h' do
+    'gggg'
+  end
+  get '/g' do
+    'hhhh'
+  end
+  
   end
 end
