@@ -12,7 +12,7 @@ module App
       if Digest::SHA1.hexdigest(codes) == params[:signature]
         halt('yes')
       else
-        halt('no')
+        halt(nonce)
       end
     end
     
