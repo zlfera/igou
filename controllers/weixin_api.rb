@@ -4,12 +4,7 @@ module App
       params[:echostr]
     end
     
-  get '/h' do
-    'gggg'
-  end
-  get '/g' do
-    'hhhh'
-  end
+
     
     
     
