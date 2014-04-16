@@ -10,7 +10,9 @@ module App
         slim :'weixin_api/reply'
       end
     end
-
+    get '/' do
+      201
+    end
     
   end
 end
