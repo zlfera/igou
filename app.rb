@@ -9,7 +9,7 @@ module App
       require 'digest/sha1'
       timestamp, nonce = params[:timestamp].to_s, params[:nonce].to_s
       codes = [TOKEN, timestamp, nonce].sort.join()
-      status 401 unless Digest::SHA1.hexdigest(codes) == params[:signature]
+      halt(401, 'go out') unless Digest::SHA1.hexdigest(codes) == params[:signature]
     end
     
 
