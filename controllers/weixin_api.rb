@@ -4,8 +4,14 @@ module App
       params[:echostr]
     end
     
-    get '/' do
-      'zenglingfa'
+    post '/weixin_api' do
+      
+      if params[:xml][:MsgType] == 'text'
+        
+      else
+        
+      end
+
     end
     
     
