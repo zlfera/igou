@@ -2,7 +2,10 @@
 module App
   
   class Gougou < Sinatra::Base
+    configure do
     #enable :logging
+    set :server, :puma
+    end
     Dir.glob('./controllers/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
     before do
