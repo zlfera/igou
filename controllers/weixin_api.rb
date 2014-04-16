@@ -8,7 +8,7 @@ module App
       
       if params[:xml][:MsgType] == 'text'
         #slim :reply, :format :xml
-
+      end
     end
     
     
