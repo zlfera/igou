@@ -5,6 +5,7 @@ module App
     configure do
     enable :logging
     set :server, :puma
+    set :force_ssl, true
     end
     Dir.glob('./controllers/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
