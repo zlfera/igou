@@ -7,7 +7,7 @@ module App
     post '/weixin_api' do
       
       if params[:xml][:MsgType] == 'text'
-        slim :'weixin_api/reply'
+        slim :'weixin_api/reply', :format :xml
       end
     end
     get '/' do
