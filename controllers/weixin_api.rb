@@ -10,7 +10,7 @@ module App
       #  slim :'weixin_api/reply'
       #end
     #end
-    get '/reply' do
+    get '/weixin_api' do
       slim :'/weixin_api/reply'
     end
     
