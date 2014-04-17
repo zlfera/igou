@@ -9,6 +9,7 @@ module App
       request.body.rewind
       #if params[:xml][:MsgType] == 'text'
         slim :'weixin_api/reply'
+        render
       #end
     end
     get '/' do
