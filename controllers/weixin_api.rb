@@ -4,7 +4,7 @@ module App
       params[:echostr]
     end
     
-    post '/weixin_api' do
+    post '/weixin_api', provides: 'xml' do
       content_type :xml, charset: 'utf-8'
       #if params[:xml][:MsgType] == 'text'
         slim :'weixin_api/reply'
