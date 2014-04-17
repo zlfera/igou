@@ -7,10 +7,10 @@ module App
     post '/weixin_api', provides: 'xml' do
       content_type :xml, charset: 'utf-8'
       request.body.rewind
-      #if params[:xml][:MsgType] == 'text'
+      if params[:xml][:MsgType] == 'text'
         slim :'weixin_api/reply'
         render
-      #end
+      end
     end
     get '/' do
       slim :'home/index'
