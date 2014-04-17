@@ -2,6 +2,8 @@
 module App
   
   class Gougou < Sinatra::Base
+    use Rack::GoogleAnalytics, :tracker => 'UA-18024881-1'
+
     configure do
     enable :logging
     set :server, :puma
