@@ -13,7 +13,7 @@ module App
       #end
     end
     get '/' do
-      'zeng'
+      slim :'home/index'
     end
     
   end
