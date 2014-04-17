@@ -5,7 +5,7 @@ module App
     end
     
     post '/weixin_api' do
-      
+      content_type :xml
       if params[:xml][:MsgType] == 'text'
         slim :'weixin_api/reply'
       end
