@@ -5,8 +5,9 @@ module App
     end
     
     post '/weixin_api', provides: 'xml' do
-      content_type :xml, charset: 'utf-8'
-      request.body.rewind
+      #content_type :xml, charset: 'utf-8'
+      #request.body.rewind
+      content_type 'text/xml'
       #if params[:xml][:MsgType] == 'text'
         cd = "<xml>
                 <ToUserName><![CDATA[ #{params[:xml][:FromUserName]} ]]></ToUserName>
