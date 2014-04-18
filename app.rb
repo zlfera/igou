@@ -7,7 +7,7 @@ module App
     enable :logging
     set :server, :puma
     set :force_ssl, true
-    set :rdoc, :layout_options => { :views => 'views/layouts/layout' }
+    set :rdoc, :layout_options => { :views => 'views/layouts/' }
     end
     Dir.glob('./controllers/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
