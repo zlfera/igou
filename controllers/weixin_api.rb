@@ -8,8 +8,16 @@ module App
       content_type :xml, charset: 'utf-8'
       request.body.rewind
       if params[:xml][:MsgType] == 'text'
-        slim :'weixin_api/reply'
-        render
+        cd = "<xml>
+    <ToUserName><![CDATA[ params[:xml][:FromUserName] ]]></ToUserName>
+    <FromUserName><![CDATA[ params[:xml][:ToUserName] ]]></FromUserName>
+    <CreateTime> Time.now.to_i </CreateTime>
+    <MsgType><![CDATA[text]]></MsgType>
+    <Content><![CDATA[re: params[:xml][:Content] ]]></Content>
+    <FuncFlag>0</FuncFlag>
+</xml>
+"
+        
       end
     end
     get '/' do
