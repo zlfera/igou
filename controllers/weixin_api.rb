@@ -13,7 +13,7 @@ module App
       #params[:echostr]
     end
     
-    post '/weixin_api', provides: 'xml' do
+    post '/weixin_apis', provides: 'xml' do
       #content_type :xml, charset: 'utf-8'
       #request.body.rewind
       content_type 'text/xml'
