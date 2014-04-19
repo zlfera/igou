@@ -4,13 +4,10 @@ module App
       #require 'digest/sha1'
       #timestamp, nonce = params[:timestamp].to_s, params[:nonce].to_s
       #codes = [TOKEN, timestamp, nonce].sort.join()
-      if true#Digest::SHA1.hexdigest(codes) == params[:signature]
-        'ff'
-      else
-        'dd'
-      end
+      #Digest::SHA1.hexdigest(codes) == params[:signature]
       #status 200 
       #params[:echostr]
+      check_token
 
     end
     
