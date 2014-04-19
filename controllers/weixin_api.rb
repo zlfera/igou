@@ -1,7 +1,16 @@
 module App
   class Gougou < Sinatra::Base
     get '/weixin_api' do
-      params[:echostr]
+      require 'digest/sha1'
+      timestamp, nonce = params[:timestamp].to_s, params[:nonce].to_s
+      codes = [TOKEN, timestamp, nonce].sort.join()
+      if Digest::SHA1.hexdigest(codes) == params[:signature]
+        'fff'
+      else
+        'ddd'
+      end
+      #status 200 
+      #params[:echostr]
     end
     
     post '/weixin_api', provides: 'xml' do
