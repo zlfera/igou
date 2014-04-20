@@ -1,31 +1,25 @@
 module App
   class Gougou < Sinatra::Base
     get '/weixin_api' do
-      #require 'digest/sha1'
-      #timestamp, nonce = params[:timestamp].to_s, params[:nonce].to_s
-      #codes = [TOKEN, timestamp, nonce].sort.join()
-      #Digest::SHA1.hexdigest(codes) == params[:signature]
-      #status 200 
-      #params[:echostr]
-      check_token
-
+      params[:echostr]
     end
     
     post '/weixin_api', provides: 'xml' do
-      #content_type :xml, charset: 'utf-8'
-      #request.body.rewind
-      content_type 'text/xml'
-      #if params[:xml][:MsgType] == 'text'
-        cd = "<xml>
-                <ToUserName><![CDATA[ #{params[:xml][:FromUserName]} ]]></ToUserName>
-                <FromUserName><![CDATA[ #{params[:xml][:ToUserName]} ]]></FromUserName>
-                <CreateTime> #{Time.now.to_i} </CreateTime>
-                <MsgType><![CDATA[text]]></MsgType>
-                <Content><![CDATA[re: #{params[:xml][:Content]} ]]></Content>
-                <FuncFlag>0</FuncFlag>
-              </xml>"
+      content_type :xml, charset: 'utf-8'
+      if params[:xml][:MsgType] == 'text'
         
-      #end
+        root = Nokogiri::XML(request.body.read).root
+        @receiver = root.xpath("ToUserName").children.text
+        @sender = root.xpath("FromUserName").children.text
+        @send_time = Time.at(root.xpath("CreateTime").text.to_i)
+        @keyword = root.xpath("Content").children.text
+        @message_type = root.xpath("MsgType").children.text
+        @message_id = root.xpath("MsgId").text.to_i
+        #nokogiri :'home/reply'
+
+        
+        slim :'home/reply'
+      end
     end
     get '/' do
       slim :'home/index'
