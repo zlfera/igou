@@ -1,0 +1,8 @@
+xml.xml do
+  xml.ToUserName { xml.cdata @sender }
+  xml.FromUserName { xml.cdata @receiver }
+  xml.CreateTime Time.now.to_i
+  xml.MsgType { xml.cdata "text" }
+  xml.Content { xml.cdata "success!" }
+  xml.FuncFlag 0
+end
