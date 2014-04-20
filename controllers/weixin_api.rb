@@ -18,7 +18,7 @@ module App
         nokogiri :'home/reply'
 
         
-        #slim :'home/reply'
+        slim :'home/reply'
       #end
     end
     get '/' do
