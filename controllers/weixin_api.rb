@@ -15,10 +15,10 @@ module App
         @keyword = root.xpath("Content").children.text
         @message_type = root.xpath("MsgType").children.text
         @message_id = root.xpath("MsgId").text.to_i
-      nokogiri :'weixin_api/reply'
+        nokogiri :'weixin_api/reply'
 
         
-      #slim :'weixin_api/reply'
+        #slim :'weixin_api/reply'
       end
     end
     get '/' do
