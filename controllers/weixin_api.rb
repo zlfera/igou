@@ -4,7 +4,7 @@ module App
       params[:echostr]
     end
     
-    post '/weixin_api', provides: 'xml' do
+    post '/weixin_api' do
       content_type :xml, charset: 'utf-8'
       #if params[:xml][:MsgType] == 'text'
         
@@ -15,7 +15,7 @@ module App
         @keyword = root.xpath("Content").children.text
         @message_type = root.xpath("MsgType").children.text
         @message_id = root.xpath("MsgId").text.to_i
-        nokogiri :'home/reply'
+        #nokogiri :'home/reply'
 
         
         slim :'home/reply'
