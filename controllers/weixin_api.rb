@@ -6,7 +6,7 @@ module App
     
     post '/weixin_api' do
       content_type :xml, charset: 'utf-8'
-      if params[:xml][:MsgType] == 'text'
+      #if params[:xml][:MsgType] == 'text'
         
         root = Nokogiri::XML(request.body.read).root
         @receiver = root.xpath("ToUserName").children.text
@@ -19,7 +19,7 @@ module App
 
         
         #slim :'weixin_api/reply'
-      end
+      #end
     end
     get '/' do
       slim :'home/index'
