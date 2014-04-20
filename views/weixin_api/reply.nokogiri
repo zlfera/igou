@@ -3,6 +3,6 @@ xml.xml do
   xml.FromUserName { xml.cdata @receiver }
   xml.CreateTime Time.now.to_i
   xml.MsgType { xml.cdata "text" }
-  xml.Content { xml.cdata "success!" }
+  xml.Content { xml.cdata "此平台正在建设中。希望大家的爱宠能够顺利回家，狗狗掉了一定要努力去找，无家可归的狗狗真的好可怜！" }
   xml.FuncFlag 0
 end

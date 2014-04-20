@@ -18,7 +18,7 @@ module App
       nokogiri :'weixin_api/reply'
 
         
-        #slim :'home/reply'
+      #slim :'weixin_api/reply'
       #end
     end
     get '/' do
