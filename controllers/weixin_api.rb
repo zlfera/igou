@@ -7,7 +7,7 @@ module App
     post '/weixin_api' do
       content_type :xml, charset: 'utf-8'
       
-        
+        @message_type = 'text'
         root = Nokogiri::XML(request.body.read).root
       if @message_type == root.xpath('MsgType').children.text
         @receiver = root.xpath("ToUserName").children.text
