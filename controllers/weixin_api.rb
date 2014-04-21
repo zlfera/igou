@@ -9,7 +9,7 @@ module App
       
         @message_type = 'text'
         root = Nokogiri::XML(request.body.read).root
-      if @message_type == root.xpath('MsgType').children.text
+      if @message_type == params[:xml][:MsgType]#root.xpath('MsgType').children.text
         @receiver = root.xpath("ToUserName").children.text
         @sender = root.xpath("FromUserName").children.text
         @send_time = Time.at(root.xpath("CreateTime").text.to_i)
