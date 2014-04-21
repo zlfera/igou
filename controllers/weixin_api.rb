@@ -15,7 +15,7 @@ module App
         @sender = root.css("FromUserName").children.text
         @send_time = Time.at(root.css("CreateTime").text.to_i)
         @keyword = root.css("Content").children.text
-        @message_id = root.cs("MsgId").text.to_i
+        @message_id = root.css("MsgId").text.to_i
         
         nokogiri :"weixin_api/#{@message_type.to_s}"
 
