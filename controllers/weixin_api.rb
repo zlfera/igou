@@ -16,7 +16,7 @@ module App
         @keyword = root.xpath("Content").children.text
         #@message_type = root.xpath("MsgType").children.text
         @message_id = root.xpath("MsgId").text.to_i
-        nokogiri :"weixin/#{@message_type.to_s}"
+        nokogiri :"weixin_api/#{@message_type.to_s}"
 
         
         #slim :'weixin_api/reply'
