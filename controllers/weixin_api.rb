@@ -8,7 +8,7 @@ module App
       content_type :xml, charset: 'utf-8'
       
       
-        root = Nokogiri::XML(request.body.read).root
+      root = Nokogiri::XML(request.body.read).root
       if @message_type = root.xpath('MsgType').children.text
         @receiver = root.xpath("ToUserName").children.text
         @sender = root.xpath("FromUserName").children.text
