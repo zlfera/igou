@@ -1,8 +1,8 @@
 production:
   sessions:
     default:
-      url: <%= ENV["DATABASE_URL"] %>
+      uri: mongodb://zlfera:01300727zz@oceanic.mongohq.com:10091/zlfera #<%= ENV["DATABASE_URL"] %>
 development:
   sessions:
     default:
-      url: <%= ENV["DATABASE_URL"] %>
+      uri: mongodb://zlfera:01300727zz@oceanic.mongohq.com:10091/zlfera #<%= ENV["DATABASE_URL"] %>
