@@ -1,4 +1,8 @@
 production:
-  url: <%= ENV["DATABASE_URL"] %>
+  sessions:
+    default:
+      url: <%= ENV["DATABASE_URL"] %>
 development:
-  url: <%= ENV["DATABASE_URL"] %>
+  sessions:
+    default:
+      url: <%= ENV["DATABASE_URL"] %>
