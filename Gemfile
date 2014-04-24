@@ -6,11 +6,11 @@ gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
 gem 'slim'
 gem 'nokogiri'
 #gem 'rack-google-analytics'
-group :development do
+#group :development do
   #gem 'sqlite3'
   #gem 'pry'
-end
-group :production do
-  gem 'newrelic_rpm'
-  gem 'pg'
-end
+#end
+#group :production do
+  #gem 'newrelic_rpm'
+  #gem 'pg'
+#end
