@@ -17,7 +17,7 @@ module App
       @content = root.css("Content").children.text
       @message_id = root.css("MsgId").text.to_i
       ###
-      @pic_url = root.css('PicUrl').children.text
+      #@pic_url = root.css('PicUrl').children.text
         
       nokogiri :"weixin_api/#{@message_type.to_s}"
 
