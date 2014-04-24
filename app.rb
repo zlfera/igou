@@ -11,8 +11,6 @@ module App
     
     end
     Mongoid.load!("./config/mongoid.yml")
-    #Mongoid.logger.level = Logger::DEBUG
-    #Moped.logger.level = Logger::DEBUG
     
     Dir.glob('./{controllers,models,helpers}/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
