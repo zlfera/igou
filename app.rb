@@ -11,7 +11,7 @@ module App
     
     end
     Mongoid.load!("./config/mongoid.yml")
-    Dir.glob('./controllers/*.rb').each {|file| require file}
+    Dir.glob('./{controllers,models,helpers}/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
     before do
       require 'digest/sha1'
