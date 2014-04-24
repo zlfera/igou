@@ -10,7 +10,7 @@ module App
     set :slim, layout_options: { views: 'views/layouts' }
     
     end
-    #Mongoid.load!("./mongoid.yml")
+    Mongoid.load!("../mongoid.yml")
     Dir.glob('./controllers/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
     before do
