@@ -40,7 +40,6 @@ GEM
       bson (~> 2.2)
       connection_pool (~> 2.0)
       optionable (~> 0.2.0)
-    newrelic_rpm (3.8.0.218)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     optionable (0.2.0)
@@ -64,7 +63,6 @@ PLATFORMS
 
 DEPENDENCIES
   mongoid!
-  newrelic_rpm
   nokogiri
   puma
   sinatra!
