@@ -1,7 +1,7 @@
 production:
   sessions:
     default:
-      uri: #mongodb://zlfera:01300727zz@oceanic.mongohq.com:10091/zlfera #<%= ENV["DATABASE_URL"] %>
+      uri: mongodb://zlfera:01300727zz@oceanic.mongohq.com:10091/zlfera #<%= ENV["DATABASE_URL"] %>
       options: 
         consistency: :strong
         max_retries: 30
@@ -11,7 +11,7 @@ production:
 development:
   sessions:
     default:
-      uri: mongodb://zlfera:01300727zz@ds039379.mongolab.com:39379/zlfera #mongodb://zlfera:01300727zz@oceanic.mongohq.com:10091/zlfera #<%= ENV["DATABASE_URL"] %>
+      uri: mongodb://zlfera:01300727zz@oceanic.mongohq.com:10091/zlfera #<%= ENV["DATABASE_URL"] %>
       options: 
         consistency: :strong
         max_retries: 30
