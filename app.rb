@@ -15,7 +15,6 @@ module App
     Dir.glob('./{controllers,models,helpers}/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
     before do
-      require "controllers#{file}"
       require 'digest/sha1'
       timestamp, nonce = params[:timestamp].to_s, params[:nonce].to_s
       codes = [TOKEN, timestamp, nonce].sort.join()
