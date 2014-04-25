@@ -10,10 +10,12 @@ module App
     set :slim, layout_options: { views: 'views/layouts' }
     
     end
+    
     Mongoid.load!("./config/mongoid.yml")
     
     Dir.glob('./{controllers,models,helpers}/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
+    
     before do
       require 'digest/sha1'
       timestamp, nonce = params[:timestamp].to_s, params[:nonce].to_s
