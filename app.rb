@@ -12,9 +12,11 @@ module App
     end
     Mongoid.load!("./config/mongoid.yml")
     
-    Dir.glob('./{controllers,models,helpers}/*.rb').each {|file| require file}
+    #Dir.glob('./{controllers,models,helpers}/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
     before do
+      file = request.path_info
+      require "controllers#{file}"
       require 'digest/sha1'
       timestamp, nonce = params[:timestamp].to_s, params[:nonce].to_s
       codes = [TOKEN, timestamp, nonce].sort.join()
