@@ -27,8 +27,15 @@ module App
       slim :'home/index'
     end
     get '/user' do
-      user = User.new(email: 'zlfera@z.com', password: '123')
-      '123' if user.save
+puts "Collections"
+
+puts "==========="
+
+collections = db.collection_names
+
+puts collections
+
+
 
     end
     
