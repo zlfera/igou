@@ -26,6 +26,11 @@ module App
     get '/' do
       slim :'home/index'
     end
+    get '/user' do
+      user = User.new(email: 'zlfera@z.com', password: '123')
+      '123' if user.save
+
+    end
     
   end
 end
