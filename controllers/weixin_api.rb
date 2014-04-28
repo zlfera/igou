@@ -1,4 +1,4 @@
-  class Weixin_api < App::Gougou
+class Weixin_api < Sinatra::Base
 #module App
   #class Gougou < Sinatra::Base
     get '/weixin_api' do
