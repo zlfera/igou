@@ -1,5 +1,6 @@
-module App
-  class Gougou < Sinatra::Base
+  class Weixin_api < App::Gougou
+#module App
+  #class Gougou < Sinatra::Base
     get '/weixin_api' do
       params[:echostr]
     end
@@ -38,4 +39,3 @@ puts "==========="
     end
     
   end
-end
