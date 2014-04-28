@@ -31,7 +31,7 @@ puts "Collections"
 
 puts "==========="
 
-collections = db.collection_names
+      collections = User.new
 
 puts collections
 
