@@ -11,7 +11,7 @@ module App
     
     end
     
-    ENV['MONGOID_ENV'] = 'production' 
+    ENV['MONGOID_ENV'] = 'development' 
     
     Mongoid.load!("./config/mongoid.yml")
     
