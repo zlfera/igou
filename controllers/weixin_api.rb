@@ -31,10 +31,8 @@ puts "Collections"
 
 puts "==========="
 
-      collections = User.new(email: 'zlfera@gmail.com', password: '123456')
+      collections = User.create(email: 'zlfera@gmail.com', password: '123456')
       collections.save
-collections
-
 
 
     end
