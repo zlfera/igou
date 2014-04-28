@@ -10,8 +10,7 @@ module App
     set :slim, layout_options: { views: 'views/layouts' }
     
     end
-    
-    #ENV['MONGOID_ENV'] = 'development' 
+     
     
     Mongoid.load!("./config/mongoid.yml", :production)
     
