@@ -31,8 +31,8 @@ puts "Collections"
 
 puts "==========="
 
-      collections = User.new
-
+      collections = User.new()
+      collections.save
 puts collections
 
 
