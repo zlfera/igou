@@ -11,9 +11,9 @@ module App
     
     end
     
-    ENV['MONGOID_ENV'] = 'development' 
+    #ENV['MONGOID_ENV'] = 'development' 
     
-    Mongoid.load!("./config/mongoid.yml")
+    Mongoid.load!("./config/mongoid.yml", :production)
     
     Dir.glob('./{controllers,models,helpers}/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
