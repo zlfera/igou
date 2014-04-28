@@ -1,4 +1,4 @@
-#module App
+module App
   class Gougou < Sinatra::Base
     get '/weixin_api' do
       params[:echostr]
@@ -28,13 +28,10 @@
     end
     get '/user' do
 puts "Collections"
-
 puts "==========="
-
       collections = User.create(email: 'zlfera@gmail.com', password: '123456')
       collections.save
-
-
     end
     
   end
+end
