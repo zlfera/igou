@@ -11,6 +11,8 @@ module App
     
     end
     
+    ENV['MONGOID_ENV'] = 'production' 
+    
     Mongoid.load!("./config/mongoid.yml")
     
     Dir.glob('./{controllers,models,helpers}/*.rb').each {|file| require file}
