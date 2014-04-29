@@ -13,7 +13,7 @@ module App
     end
      
     
-    #Mongoid.load!("./config/mongoid.yml", :production)
+    Mongoid.load!("./config/mongoid.yml", :production)
     
     Dir.glob('./{controllers,models,helpers}/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
