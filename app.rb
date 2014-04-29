@@ -3,7 +3,7 @@ module App
   
   class Gougou < Sinatra::Base
     
-    register Sinatra::Routes
+    #register Sinatra::Routes
     
     configure do
     enable :logging
