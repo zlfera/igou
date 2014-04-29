@@ -1,5 +1,5 @@
 module App
-  class Gougou < Sinatra::Base
+  class Gougoui < Sinatra::Base
     get '/weixin_api' do
       params[:echostr]
     end
