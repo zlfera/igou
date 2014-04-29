@@ -1,6 +1,6 @@
-#module App
-#  class Gougou < Sinatra::Base
-routes do
+module App
+  class Gougou < Sinatra::Base
+#routes do
     get '/weixin_api' do
       params[:echostr]
     end
@@ -34,5 +34,5 @@ puts "==========="
       collections.save
     end
     
-  #end
+  end
 end
