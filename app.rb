@@ -2,7 +2,9 @@
 module App
   
   class Gougou < Sinatra::Base
-
+    
+    register Sinatra::Routes
+    
     configure do
     enable :logging
     set :server, :puma
