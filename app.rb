@@ -3,7 +3,6 @@ module App
   
   class Gougou < Sinatra::Base
     
-    #register Sinatra::Routes
     
     configure do
     enable :logging
@@ -14,7 +13,7 @@ module App
     end
      
     
-    Mongoid.load!("./config/mongoid.yml")
+    Mongoid.load!("./config/mongoid.yml", :production)
     
     Dir.glob('./{controllers,models,helpers}/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
