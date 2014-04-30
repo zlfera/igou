@@ -3,9 +3,10 @@ module App
   
   class Gougou < Sinatra::Base
     
-    
+    env = ENV['RACK_ENV'] || :development
     configure :production do
       require 'newrelic_rpm'
+      Mongoid.load!('./config/mongoid.yml', env)
       enable :logging
       set :server, :puma
       set :force_ssl, true
@@ -13,8 +14,7 @@ module App
       GC::Profiler.enable
     end
      
-    env = ENV['RACK_ENV'] || :development
-    Mongoid.load!("./config/mongoid.yml", env)
+
     
     Dir.glob('./{controllers,models,helpers}/*.rb').each {|file| require file}
     TOKEN = 'igougougou'
