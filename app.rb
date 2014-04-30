@@ -4,16 +4,17 @@ module App
   class Gougou < Sinatra::Base
     
     
-    configure do
-    enable :logging
-    set :server, :puma
-    set :force_ssl, true
-    set :slim, layout_options: { views: 'views/layouts' }
+    configure :production do
+      require 'newrelic_rpm'
+      enable :logging
+      set :server, :puma
+      set :force_ssl, true
+      set :slim, layout_options: { views: 'views/layouts' }
     
     end
      
-    
-    Mongoid.load!("./config/mongoid.yml", :production)
+    env = ENV['RACK_ENV'] || :development
+    Mongoid.load!("./config/mongoid.yml", env)
     
     Dir.glob('./{controllers,models,helpers}/*.rb').each {|file| require file}
     TOKEN = 'igougougou'

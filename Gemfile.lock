@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/mongoid/mongoid.git
-  revision: 8b33b62a43fb989a6a6db9beb72d98d8c84874ea
+  revision: e93a4837b0266db46c24aae172e184f57c847b04
   specs:
     mongoid (4.0.0.beta1)
       activemodel (>= 4.0.0)
@@ -40,6 +40,7 @@ GEM
       bson (~> 2.2)
       connection_pool (~> 2.0)
       optionable (~> 0.2.0)
+    newrelic_rpm (3.8.0.218)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     optionable (0.2.0)
@@ -63,6 +64,7 @@ PLATFORMS
 
 DEPENDENCIES
   mongoid!
+  newrelic_rpm
   nokogiri
   puma
   sinatra!
