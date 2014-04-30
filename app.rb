@@ -10,7 +10,7 @@ module App
       set :server, :puma
       set :force_ssl, true
       set :slim, layout_options: { views: 'views/layouts' }
-    
+      GC::Profiler.enable
     end
      
     env = ENV['RACK_ENV'] || :development
