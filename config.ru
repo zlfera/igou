@@ -1,5 +1,5 @@
 require 'rubygems'
-require "bundler"
+require 'bundler'
 Bundler.require
 require './config/config'
 Dir.glob('./{models,helpers,controllers}/*.rb').each {|file| require file}
