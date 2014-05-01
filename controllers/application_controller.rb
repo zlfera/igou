@@ -1,8 +1,5 @@
 $:.unshift(File.expand_path('../../lib', __FILE__))
 
-#require 'sinatra/base'
-#require 'slim'
-
 class ApplicationController < Sinatra::Base
   
   set :views, File.expand_path('../../views', __FILE__)
