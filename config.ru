@@ -1,6 +1,6 @@
 require "bundler"
 Bundler.require
-Dir.glob('./{controllers, helpers, models}/*.rb').each {|file| require file}
+Dir.glob('./{helpers, models, controllers}/*.rb').each {|file| require file}
 require './config/config'
 
 #routes#########################################
