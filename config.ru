@@ -1,3 +1,4 @@
+require 'sinatra/base'
 require "bundler"
 Bundler.require
 require './config/config'

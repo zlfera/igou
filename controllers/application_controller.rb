@@ -1,5 +1,8 @@
 $:.unshift(File.expand_path('../../lib', __FILE__))
 
+require 'sinatra/base'
+require 'slim'
+
 class ApplicationController < Sinatra::Base
   
   set :views, File.expand_path('../../views', __FILE__)
@@ -7,8 +10,8 @@ class ApplicationController < Sinatra::Base
   
   helpers ApplicationHelper
   get '/' do
-    #@user = User.new(email: 'zlfera@msn.com', password: '123')
-    #@user.save
+    @user = User.new(email: 'zlfera@msn.com', password: '123')
+    @user.save
     slim :'home/index'
   end
   
