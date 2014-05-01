@@ -1,4 +1,6 @@
 require "bundler"
 Bundler.require
-require './app'
-run App::Gougou
+Dir.glob('./{controllers, helpers, models}/*.rb').each {|file| require file}
+#require './app'
+#run App::Gougou
+map('/weixin_api') { run WeixinApiController }
