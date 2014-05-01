@@ -6,8 +6,8 @@ class ApplicationController < Sinatra::Base
   set :slim, layout_options: { views: 'views/layouts' }
   
   get '/' do
-    @user = User.new(email: 'zlfera@msn.com', password: '123')
-    @user.save
+    #@user = User.new(email: 'zlfera@msn.com', password: '123')
+    #@user.save
     slim :'home/index'
   end
   
