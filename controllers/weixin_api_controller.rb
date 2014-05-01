@@ -1,5 +1,3 @@
-#module App
-  #class Gougou < Sinatra::Base
 class WeixinApiController < ApplicationController
   ###############################
   TOKEN = 'igougougou'
@@ -37,13 +35,4 @@ class WeixinApiController < ApplicationController
 
     
     
-    #get '/user' do
-      #puts "Collections"
-      #puts "==========="
-      #collections = User.create(email: 'zlfera@gmail.com', password: '123456')
-      #collections.save
-    #end
-    
-  #end
-#end
 end
