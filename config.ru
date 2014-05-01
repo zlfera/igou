@@ -10,6 +10,6 @@ configure :production do
   enable :logging
   GC::Profiler.enable
 end
-
+#routes
 map('/weixin_api') { run WeixinApiController }
 map('/') {run WeixinApiController}

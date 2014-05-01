@@ -35,7 +35,7 @@ class WeixinApiController < ApplicationController
         
     end
 
-    get '/home' do
+    get '/' do
       slim :'home/index'
     end
     
