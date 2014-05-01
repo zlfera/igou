@@ -12,3 +12,4 @@ configure :production do
 end
 
 map('/weixin_api') { run WeixinApiController }
+map('/') {run WeixinApiController}
