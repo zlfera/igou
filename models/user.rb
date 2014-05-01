@@ -1,4 +1,4 @@
-require 'mongoid'
+#require 'mongoid'
 class User
     include Mongoid::Document
       field :email, type: String
