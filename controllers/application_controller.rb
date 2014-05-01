@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
   helpers ApplicationHelper
   get '/' do
     @user = User.new(email: 'zlfera@msn.com', password: '123')
-    @user.save
+    #@user.save
     slim :'home/index'
   end
   
