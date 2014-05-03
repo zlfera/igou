@@ -12,4 +12,9 @@ class ApplicationController < Sinatra::Base
     slim :'home/index'
   end
   
+  get '/create' do
+    
+    slim :'home/create'
+  end
+  
 end
