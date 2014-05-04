@@ -1,5 +1,5 @@
 #coding:utf-8
-require ' rubygems'
+require 'rubygems'
 require 'bundler'
 Bundler.require
 require './config/config'
