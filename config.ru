@@ -6,5 +6,5 @@ require './config/config'
 Dir.glob('./{helpers,models,controllers}/*.rb').each {|file| require file}
 
 #routes#########################################
-map('/weixin_api') { run WeixinAppiController }
+map('/weixin_api') { run WeixinAppliController }
 map('/') {run ApplicationController}
