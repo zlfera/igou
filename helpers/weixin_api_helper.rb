@@ -1,0 +1,3 @@
+module WeixinApiHelper
+  
+end
