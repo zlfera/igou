@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'bundler'
 Bundler.require
-#set :public_folder, File.expand_path('../../public', __FILE__)
+set :public_folder, File.expand_path('../public', __FILE__)
 require './config/config'
 Dir.glob('./{helpers,models,controllers}/*.rb').each {|file| require file}
 
