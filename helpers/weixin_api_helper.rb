@@ -1,3 +1,3 @@
+#
 module WeixinApiHelper
-  
 end
