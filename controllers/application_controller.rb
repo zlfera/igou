@@ -4,6 +4,7 @@ class ApplicationController < Sinatra::Base
   set :public_folder, File.expand_path('../../public', __FILE__)
   set :views, File.expand_path('../../views', __FILE__)
   set :slim, layout_options: { views: 'views/layouts' }
+
   helpers ApplicationHelper
 
   get '/' do
@@ -16,5 +17,9 @@ class ApplicationController < Sinatra::Base
 
   get '/create' do
     slim :'home/create'
+  end
+
+  not_found do
+    'sorry,there is no you want'
   end
 end
