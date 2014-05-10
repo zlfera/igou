@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
   set :public_folder, File.expand_path('../../public', __FILE__)
   set :views, File.expand_path('../../views', __FILE__)
   set :slim, layout_options: { views: 'views/layouts' }
-  set :static, false
+  # set :static, false
   helpers ApplicationHelper
 
   get '/' do
