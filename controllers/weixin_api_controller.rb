@@ -1,4 +1,5 @@
 #
+module Z
 class WeixinApiController < ApplicationController
   ###############################
   TOKEN = 'igougougou'
@@ -30,4 +31,5 @@ class WeixinApiController < ApplicationController
     nokogiri :"weixin_api/#{@message_type.to_s}"
 
   end
+end
 end
