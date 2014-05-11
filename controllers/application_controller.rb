@@ -1,5 +1,6 @@
 $LOAD_PATH.unshift(File.expand_path('../../lib', __FILE__))
 #
+module Zlf
 class ApplicationController < Sinatra::Base
   set :public_folder, File.expand_path('../../public', __FILE__)
   set :views, File.expand_path('../../views', __FILE__)
@@ -22,4 +23,5 @@ class ApplicationController < Sinatra::Base
   not_found do
     'sorry,there is no you want'
   end
+end
 end
