@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
   helpers ApplicationHelper
 
   get '/' do
-    cache_control :public
+    cache_control :public, :must_revalidate, :max_age => 60
     @user = User.new(email: 'zlfera@msn.com',
                      password: '123',
                      content: 'hello,zeng')
