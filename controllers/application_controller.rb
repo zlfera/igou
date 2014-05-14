@@ -1,4 +1,3 @@
-$LOAD_PATH.unshift(File.expand_path('../../lib', __FILE__))
 #
 class ApplicationController < Sinatra::Base
   set :public_folder, File.expand_path('../../public', __FILE__)
