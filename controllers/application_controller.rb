@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
                      password: '123',
                      content: 'hello,zeng')
     @user.save
-    @title = 'weixin'
+    @title_name = 'weixin'
     slim :'home/index'
   end
 
