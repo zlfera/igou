@@ -17,6 +17,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/create' do
+    @title_name = 'create'
     slim :'home/create'
   end
 
