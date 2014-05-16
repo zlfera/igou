@@ -7,3 +7,4 @@ $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 # routes########################################
 map('/weixin_api') { run WeixinApiController }
 map('/') { run ApplicationController }
+map('/index') { run IndexController}
