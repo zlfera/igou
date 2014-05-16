@@ -5,13 +5,14 @@ class ApplicationController < Sinatra::Base
   set :slim, layout_options: { views: 'views/layouts' }
   # set :static, false
   helpers ApplicationHelper
-  
+
   get '/' do
-    cache_control :public, :must_revalidate, :max_age => 60
+    cache_control :public, :must_revalidate, max_age: 60
     @user = User.new(email: 'zlfera@msn.com',
                      password: '123',
                      content: 'hello,zeng')
     @user.save
+    @title = weixin
     slim :'home/index'
   end
 
