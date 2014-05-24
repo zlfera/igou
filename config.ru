@@ -1,5 +1,7 @@
+require 'rubygems'
 require 'bundler'
 Bundler.require
+require 'sinatra/base'
 require './config/config'
 Dir.glob('./{helpers,models,controllers}/*.rb').each { |file| require file }
 
