@@ -8,6 +8,7 @@ require './config/config'
   end
 end
 # routes########################################
-map('/') { run ApplicationController }
-map('/weixin_api') { run WeixinApiController }
-map('/index') { run IndexController }
+# map('/') { run ApplicationController }
+# map('/weixin_api') { run WeixinApiController }
+# map('/index') { run IndexController }
+run Sinatra::Application
