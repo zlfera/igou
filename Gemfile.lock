@@ -10,7 +10,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    bson (2.2.3)
+    bson (2.2.4)
     builder (3.2.2)
     connection_pool (2.0.0)
     i18n (0.6.9)
