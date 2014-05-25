@@ -1,5 +1,5 @@
 #
-class WeixinApiController < AppplicationController
+class WeixinApiController < ApplicationController
   ###############################
   TOKEN = 'igougougou'
   before do
