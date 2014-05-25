@@ -25,4 +25,3 @@ class ApplicationController < Sinatra::Base
     'sorry,there is no you want'
   end
 end
-#
