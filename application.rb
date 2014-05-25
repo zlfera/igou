@@ -1,5 +1,5 @@
 %w(helpers models controllers).each do |dir|
-  Dir.glob(File.expand_path("../#{dir}", __FILE__) + '/**/*.rb').each do |file|
+  Dir.glob(File.expand_path("../#{dir}", __FILE__) + '/*.rb').each do |file|
     require file
   end
 end
