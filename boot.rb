@@ -1,4 +1,4 @@
-# require 'rubygems'
+require 'rubygems'
 
 # Set rack environment
 ENV['RACK_ENV'] ||= "development"
