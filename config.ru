@@ -11,7 +11,7 @@ require File.expand_path("../boot", __FILE__)
 #   end
 # end
 # routes########################################
-map('/') { run Zlf::ApplicationController }
-map('/weixin_api') { run Zlf::WeixinApiController }
-map('/index') { run Zlf::IndexController }
+map('/') { run ApplicationController }
+map('/weixin_api') { run WeixinApiController }
+map('/index') { run IndexController }
 
