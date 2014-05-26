@@ -17,9 +17,10 @@ class Sinatra::Base
     c.set :slim, layout_options: { views: 'views/layouts' }
     c.enable :logging, :static, :sessions
   end
-end
+
 %w(helpers models controllers).each do |dir|
   Dir.glob(File.expand_path("../#{dir}", __FILE__) + '/*').each do |file|
     require file
   end
+end
 end
