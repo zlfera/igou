@@ -2,7 +2,7 @@
 # require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
 # require 'bundler'
 # Bundler.require
-#require './config/config'
+# require './config/config'
 require File.expand_path("../boot", __FILE__)
 # Dir.glob('./{helpers,models,controllers}/*.rb').each { |file| require file }
 # %w(helpers models controllers).each do |dir|
