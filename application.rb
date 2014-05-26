@@ -11,7 +11,7 @@ end
 
 class Sinatra::Base
   configure do |c|
-   # c.set :root, File.expand_path("../", __FILE__)
+    c.set :root, File.expand_path("../", __FILE__)
     c.set :public_folder, File.expand_path("../public", __FILE__)
     c.set :views, File.expand_path("../views", __FILE__)
     c.set :slim, layout_options: { views: 'views/layouts' }
