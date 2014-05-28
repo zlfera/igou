@@ -6,4 +6,4 @@ require File.expand_path("../config/boot", __FILE__)
 # run ApplicationController
 # run WeixinApiController
 # run IndexController
-run Sinatra::Application
+run! if app_file == $0
