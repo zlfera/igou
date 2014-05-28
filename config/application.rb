@@ -1,9 +1,9 @@
 %w(helpers models controllers).each do |dir|
   Dir.glob(File.expand_path("../../#{dir}", __FILE__) + '/*').each do |file|
-    load file
+    require file
   end
 end
-Bundler.require(:default, ENV['RACK_ENV'])
+Bundler.require
 
 libdir = File.expand_path('../../lib', __FILE__)
 # a = File.expand_path('./controllers', __FILE__)
