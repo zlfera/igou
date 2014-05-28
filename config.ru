@@ -1,4 +1,4 @@
-require File.expand_path("../config/boot", __FILE__)
+require File.expand_path('../config/boot', __FILE__)
 # routes########################################
 # map('/') { run ApplicationController }
 # map('/weixin_api') { run WeixinApiController }

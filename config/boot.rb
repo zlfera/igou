@@ -10,4 +10,4 @@ Bundler.require(:default, ENV['RACK_ENV'])
 # require 'sinatra/reloader' if development?
 
 # Set project configuration
-require File.expand_path("../application", __FILE__)
+require File.expand_path('../application', __FILE__)
