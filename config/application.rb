@@ -1,3 +1,9 @@
+%w(helpers models controllers).each do |dir|
+  Dir.glob(File.expand_path("../../#{dir}", __FILE__) + '/*').each do |file|
+    load file
+  end
+end
+
 libdir = File.expand_path('../../lib', __FILE__)
 # a = File.expand_path('./controllers', __FILE__)
 # $LOAD_PATH.unshift(a) unless $LOAD_PATH.include?(a)
@@ -11,15 +17,10 @@ end
 
 class Sinatra::Base
   configure do |c|
-    c.set :root, File.expand_path("../", __FILE__)
+    c.set :root, File.expand_path("../../", __FILE__)
     c.set :public_folder, File.expand_path("../../public", __FILE__)
     c.set :views, File.expand_path("../../views", __FILE__)
     c.set :slim, layout_options: { views: 'views/layouts' }
 #   c.enable :logging, :static, :sessions
-  end
-end
-%w(helpers models controllers).each do |dir|
-  Dir.glob(File.expand_path("../../#{dir}", __FILE__) + '/*').each do |file|
-    require file
   end
 end
