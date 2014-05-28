@@ -10,11 +10,11 @@ class WeixinApiController < ApplicationController
   end
   ###############################
 
-  get '/weixin_api' do
+  get '/' do
     params[:echostr]
   end
 
-  post '/weixin_api' do
+  post '/' do
     content_type :xml, charset: 'utf-8'
 
     root = Nokogiri::XML(request.body.read).root
