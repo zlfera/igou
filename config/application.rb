@@ -14,7 +14,7 @@ configure :production do
   GC::Profiler.enable
 end
 
-class Sinatra::Base
+class ApplicationController
   configure do |c|
     c.set :root, File.expand_path('../../', __FILE__)
     c.set :public_folder, File.expand_path('../../public', __FILE__)
