@@ -3,7 +3,7 @@
 # require 'bundler'
 # Bundler.require
 # require './config/config'
-require File.expand_path("../boot", __FILE__)
+require File.expand_path("../config/boot", __FILE__)
 # Dir.glob('./{helpers,models,controllers}/*.rb').each { |file| require file }
 # %w(helpers models controllers).each do |dir|
 #  Dir.glob(File.expand_path("../#{dir}", __FILE__) + '/**/*.rb').each do |file|
