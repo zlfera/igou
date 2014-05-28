@@ -3,7 +3,6 @@
     require file
   end
 end
-Bundler.require
 
 libdir = File.expand_path('../../lib', __FILE__)
 # a = File.expand_path('./controllers', __FILE__)
