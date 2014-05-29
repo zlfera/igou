@@ -7,5 +7,6 @@ gem 'slim'
 gem 'nokogiri'
 group :production do
   gem 'newrelic_rpm'
+  gem 'capistrano', '>= 3.2.0'
 #  gem 'rails_12factor'
 end
