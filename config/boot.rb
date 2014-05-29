@@ -3,11 +3,14 @@
 ENV['RACK_ENV'] ||= "development"
 
 # Set up gems listed in the Gemfile.
-ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
-require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
-Bundler.require(:default, ENV['RACK_ENV'])
+# ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
+# require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
+# Bundler.require(:default, ENV['RACK_ENV'])
 # require 'sinatra'
 # require 'sinatra/reloader' if development?
+require 'rubygems'
+require 'bundler'
 
+Bundler.require
 # Set project configuration
 require File.expand_path('../application', __FILE__)

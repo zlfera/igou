@@ -3,7 +3,7 @@
     require file
   end
 end
-
+ENV['RACK_ENV'] ||= "development"
 libdir = File.expand_path('../../lib', __FILE__)
 $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 Mongoid.load!('./config/mongoid.yml', ENV['RACK_ENV'])
