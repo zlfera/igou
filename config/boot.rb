@@ -8,9 +8,6 @@
 # Bundler.require(:default, ENV['RACK_ENV'])
 # require 'sinatra'
 # require 'sinatra/reloader' if development?
-require 'rubygems'
-require 'bundler'
 
-Bundler.require
 # Set project configuration
 require File.expand_path('../application', __FILE__)
