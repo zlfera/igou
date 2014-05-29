@@ -1,6 +1,6 @@
 
 # Set rack environment
-ENV['RACK_ENV'] ||= "development"
+# ENV['RACK_ENV'] ||= "development"
 
 # Set up gems listed in the Gemfile.
 # ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../../Gemfile', __FILE__)
