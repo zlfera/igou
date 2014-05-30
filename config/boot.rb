@@ -1,4 +1,3 @@
-
 # Set rack environment
 ENV['RACK_ENV'] ||= "development"
 
