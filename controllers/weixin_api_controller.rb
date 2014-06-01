@@ -1,20 +1,20 @@
 #
 class WeixinApiController < ApplicationController
   ###############################
-  #TOKEN = 'igougougou'
-  #before do
-   # require 'digest/sha1'
-    #timestamp, nonce = params[:timestamp].to_s, params[:nonce].to_s
-    #codes = [TOKEN, timestamp, nonce].sort.join
-    #status 200 unless Digest::SHA1.hexdigest(codes) == params[:signature]
-  #end
+  TOKEN = 'igougougou'
+  before do
+    require 'digest/sha1'
+    timestamp, nonce = params[:timestamp].to_s, params[:nonce].to_s
+    codes = [TOKEN, timestamp, nonce].sort.join
+    status 200 unless Digest::SHA1.hexdigest(codes) == params[:signature]
+  end
   ################################
 
-  get '/weixin_api' do
+  get '/' do
     params[:echostr]
   end
 
-  post '/weixin_api' do
+  post '/' do
     content_type :xml, charset: 'utf-8'
 
     root = Nokogiri::XML(request.body.read).root
@@ -29,8 +29,5 @@ class WeixinApiController < ApplicationController
     # @pic_url = root.css('PicUrl').children.text
     nokogiri :"weixin_api/#{@message_type.to_s}"
 
-  end
-  get '/zlf' do
-    'hello'
   end
 end
