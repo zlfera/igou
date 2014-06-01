@@ -2,12 +2,12 @@
 class WeixinApiController < ApplicationController
   ###############################
   TOKEN = 'igougougou'
-  before do
-    require 'digest/sha1'
-    timestamp, nonce = params[:timestamp].to_s, params[:nonce].to_s
-    codes = [TOKEN, timestamp, nonce].sort.join
-    status 200 unless Digest::SHA1.hexdigest(codes) == params[:signature]
-  end
+#  before do
+ #   require 'digest/sha1'
+  #  timestamp, nonce = params[:timestamp].to_s, params[:nonce].to_s
+   # codes = [TOKEN, timestamp, nonce].sort.join
+    #status 200 unless Digest::SHA1.hexdigest(codes) == params[:signature]
+  #end
   ###############################
 
   get '/weixin_api' do
@@ -29,8 +29,5 @@ class WeixinApiController < ApplicationController
     # @pic_url = root.css('PicUrl').children.text
     nokogiri :"weixin_api/#{@message_type.to_s}"
 
-  end
-  get '/zlf' do
-    'hello'
   end
 end
