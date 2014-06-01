@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
     slim :'home/create'
   end
 
-  not_found do
-    'sorry,there is no you want'
-  end
+  #not_found do
+   # 'sorry,there is no you want'
+  #end
 end
