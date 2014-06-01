@@ -29,7 +29,7 @@ class WeixinApiController < ApplicationController
     # @pic_url = root.css('PicUrl').children.text
     #nokogiri :"weixin_api/#{@message_type.to_s}"
 
-  end
+#  end
   get '/zlf' do
     'hello'
   end
