@@ -30,4 +30,7 @@ class WeixinApiController < ApplicationController
     nokogiri :"weixin_api/#{@message_type.to_s}"
 
   end
+  get '/zlf' do
+    'hello'
+  end
 end
